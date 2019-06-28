@@ -57,7 +57,7 @@
 #include <malloc.h> // memalign() function
 
 // DMA transfer-in-progress indicator and callback
-static volatile boolean dma_busy = false;
+static volatile bool dma_busy = false;
 static void dma_callback(Adafruit_ZeroDMA *dma) {
     dma_busy = false;
 }
@@ -778,7 +778,7 @@ void Adafruit_SPITFT::fillRect(int16_t x, int16_t y, int16_t w, int16_t h,
     @param   i  True if you want to invert, false to make 'normal'
 */
 /**************************************************************************/
-void Adafruit_SPITFT::invertDisplay(boolean i) {
+void Adafruit_SPITFT::invertDisplay(bool i) {
   startWrite();
   writeCommand(i ? invertOnCommand : invertOffCommand);
   endWrite();

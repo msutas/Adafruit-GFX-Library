@@ -98,7 +98,7 @@ class Adafruit_SPITFT : public Adafruit_GFX {
         using     Adafruit_GFX::drawRGBBitmap; // Check base class first
         void      drawRGBBitmap(int16_t x, int16_t y,
                     uint16_t *pcolors, int16_t w, int16_t h);
-	void      invertDisplay(boolean i);
+	void      invertDisplay(bool i);
 
         uint16_t  color565(uint8_t r, uint8_t g, uint8_t b);
         void      writeCommand(uint8_t cmd);
